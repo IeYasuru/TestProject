@@ -1,9 +1,37 @@
 #pragma once
+
+#include "position.h"
+#include "macros.h"
+#include "pc.h"
+#include "status.h"
+#include "skill.h"
+#include "mob.h"
+#include "inventory.h"
+
 class stats
 {
 	public:
 		stats();
 		~stats();
+		
+	private: 
+		int str;
+		int _int;
+		int dex;
+		int agi;
+		int vit;
+		int luk;
+		
+		int atk, matk;
+//	int atk2, matk2;
+		int def, mdef;
+//	int def2, mdef2;
+
+		int hit;
+		int flee;
+		int crit;
+		
+		double mfind;
 };
 
 enum pc_stats
@@ -19,7 +47,7 @@ enum pc_stats
 	//	PC_ATK2,
 	//	PC_MATK2,
 	PC_DEF,
-	PC_MDEF2,
+	PC_MDEF;
 	//	PC_DEF2,
 	//	PC_MDEF2,
 	PC_MAGICFIND,
